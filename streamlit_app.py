@@ -75,5 +75,6 @@ if st.button("Run Forecast"):
         forecast.plot(label="Forecast", ax=ax)
         plt.legend()
         st.pyplot(fig)
+        st.line_chart(btc_data['Close'],forecast)
     except Exception as e:
         st.error(f"❌ Forecasting failed: {e}")
